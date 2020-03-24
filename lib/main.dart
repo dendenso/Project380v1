@@ -1,6 +1,4 @@
-// Copyright 2018 The Flutter team. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+
 
 import 'package:flutter/material.dart';
 
@@ -10,15 +8,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.deepPurple
+      ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Welcome to Flutter'),
+          title: const Text('Main Menu'),
         ),
-        body: Center(
-          child: Text('Hello World'),
-        ),
+    body: Center(
+      child: FlatButton(
+        onPressed: (){},
+        child: Text('Button')
+
       ),
-    );
+    ),
+      )
+      );
   }
 }

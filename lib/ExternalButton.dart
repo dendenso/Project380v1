@@ -1,21 +1,55 @@
 import 'package:flutter/material.dart';
-class TestingWidget extends StatefulWidget {
-  _TestingWidget createState() => _TestingWidget();
+//import 'package:testingmain/ThemeofApp.dart';
+void main(){
+  runApp(MaterialApp(
+    title: 'Navigating',
+    home: Route1(),
+  ));
+}
+
+class Route1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.deepPurple,
+      ),
+      home: Scaffold(
+      appBar: AppBar(
+        title: Text('Choice 1'),
+      ),
+      body:Center(
+        child: FlatButton(
+          child: Text('Choice 1'),
+          onPressed:(){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder:(context) =>
+              Route2()),
+            );
+            }
+    ),
+            ),
+            ),
+        );
   }
-class _TestingWidget extends State<TestingWidget>{
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        IconButton(
-          icon: Icon(Icons.volume_up),
-          tooltip: 'Clicky Clicky',
-          onPressed: () { // should redirect here
-            setState(() {
-            });
-          },
+}
+class Route2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Route2"),
+      ),
+      body: Center(
+        child: FlatButton(
+          onPressed: () {
+    Navigator.pop(context);
+    },
+    child: Text('Return'),
         ),
-      ],
-    );
+  ),
+      );
   }
 }
