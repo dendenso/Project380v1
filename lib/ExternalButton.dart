@@ -4,6 +4,7 @@ void main(){
   runApp(MaterialApp(
     title: 'Navigating',
     home: Route1(),
+
   ));
 }
 
