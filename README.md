@@ -1,6 +1,6 @@
-# testingmain
+# wellnessapplication
 
-Main
+A new Flutter application.
 
 ## Getting Started
 
