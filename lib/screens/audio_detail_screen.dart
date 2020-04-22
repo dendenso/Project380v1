@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../audio_data.dart';
+import 'package:wellnessapplication/timer/countdown.dart';
 
 class AudioDetailScreen extends StatelessWidget {
   static const routeName = '/audio-detail';
@@ -71,6 +72,67 @@ class AudioDetailScreen extends StatelessWidget {
                 itemCount: selectedAudio.about.length,
               ),
             ),
+
+            //CountDown
+            Padding(
+              padding:
+              const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+              child: Container(
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CountDown(),
+                      ),
+                    );
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Hero(
+                          tag: "title1",
+                          transitionOnUserGestures: true,
+                          child: Material(
+                            color: Colors.transparent,
+                            child: Text(
+                              "Duration",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.w300,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                height: 50,
+                width: 200,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.orange,
+                      Colors.red,
+                    ],
+                    stops: [
+                      0.3,
+                      0.6,
+                    ],
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                  ),
+                  borderRadius: BorderRadius.circular(16.0),
+                ),
+              ),
+            ),
+
+
 
 // Uncommenting this, among the other commented out pieces in different files of the
 // code will add a "steps" section
