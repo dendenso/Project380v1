@@ -83,7 +83,7 @@ class AudioDetailScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => CountDown(),
+                        builder: (context) => Countdown(),
                       ),
                     );
                   },

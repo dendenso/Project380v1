@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 import '../audio_data.dart';
 
 
-class CountDown extends StatelessWidget {
+class Countdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: CountDownTimer(),
       debugShowCheckedModeBanner: false,
+      title: "Timer",
       theme: ThemeData(
         iconTheme: IconThemeData(
           color: Colors.white,
@@ -25,8 +26,7 @@ class CountDownTimer extends StatefulWidget {
   _CountDownTimerState createState() => _CountDownTimerState();
 }
 
-class _CountDownTimerState extends State<CountDownTimer>
-    with TickerProviderStateMixin {
+class _CountDownTimerState extends State<CountDownTimer> with TickerProviderStateMixin {
   AnimationController controller;
 
   String get timerString {
@@ -47,6 +47,13 @@ class _CountDownTimerState extends State<CountDownTimer>
   Widget build(BuildContext context) {
     ThemeData themeData = Theme.of(context);
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Count Down Timer"
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.red,
+      ),
       backgroundColor: Colors.grey,
       body: AnimatedBuilder(
           animation: controller,
@@ -81,12 +88,12 @@ class _CountDownTimerState extends State<CountDownTimer>
                                     crossAxisAlignment:
                                     CrossAxisAlignment.center,
                                     children: <Widget>[
-                                      Text(
-                                        "Count Down Timer",
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            color: Colors.white),
-                                      ),
+//                                      Text(
+//                                        "Count Down Timer",
+//                                        style: TextStyle(
+//                                            fontSize: 20.0,
+//                                            color: Colors.white),
+//                                      ),
                                       Text(
                                         timerString,
                                         style: TextStyle(
@@ -101,6 +108,7 @@ class _CountDownTimerState extends State<CountDownTimer>
                           ),
                         ),
                       ),
+
                       AnimatedBuilder(
                           animation: controller,
                           builder: (context, child) {
@@ -121,6 +129,7 @@ class _CountDownTimerState extends State<CountDownTimer>
                                 label: Text(
                                     controller.isAnimating ? "Pause" : "Play"));
                           }),
+
                     ],
                   ),
                 ),
