@@ -15,7 +15,7 @@ class Countdown extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Colors.white,
         ),
-        accentColor: Colors.red,
+        accentColor: Colors.teal,
       ),
     );
   }
@@ -49,12 +49,12 @@ class _CountDownTimerState extends State<CountDownTimer> with TickerProviderStat
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Count Down Timer"
+          "Meditation Timer"
         ),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.teal,
       ),
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.white,
       body: AnimatedBuilder(
           animation: controller,
           builder: (context, child) {
@@ -98,7 +98,7 @@ class _CountDownTimerState extends State<CountDownTimer> with TickerProviderStat
                                         timerString,
                                         style: TextStyle(
                                             fontSize: 112.0,
-                                            color: Colors.white),
+                                            color: Colors.amber)
                                       ),
                                     ],
                                   ),

@@ -75,8 +75,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'DeliAudio',
       theme: ThemeData(
-        primarySwatch: Colors.pink,
-        accentColor: Colors.amber,
+        primarySwatch: Colors.teal,
+        accentColor: Colors.amberAccent,
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(

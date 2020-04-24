@@ -99,7 +99,7 @@ class AudioDetailScreen extends StatelessWidget {
                           child: Material(
                             color: Colors.transparent,
                             child: Text(
-                              "Duration",
+                              "Timer",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 22.0,
@@ -117,8 +117,8 @@ class AudioDetailScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Colors.orange,
-                      Colors.red,
+                      Colors.teal,
+                      Colors.teal,
                     ],
                     stops: [
                       0.3,

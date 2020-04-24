@@ -13,23 +13,22 @@ const AUDIO_CATEGORIES = const [
   Category(
     id: 'c1',
     title: 'Meditate',
-    color: Colors.purple,
-
+    color: Colors.redAccent,
   ),
   Category(
     id: 'c2',
     title: 'Study',
-    color: Colors.red,
+    color: Colors.cyan,
   ),
   Category(
     id: 'c3',
     title: 'Sleep',
-    color: Colors.orange,
+    color: Colors.blueGrey,
   ),
   Category(
     id: 'c4',
     title: 'Workout',
-    color: Colors.amber,
+    color: Colors.green,
   ),
 ];
 
