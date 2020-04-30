@@ -8,7 +8,7 @@ import '../widgets/audio_items.dart';
 // No need to manipulate anything on this page.
 
 class FavoritesScreen extends StatelessWidget {
-  final List<Audio> favoriteAudio;
+  final List<Grouping> favoriteAudio;
 
   FavoritesScreen(this.favoriteAudio);
 

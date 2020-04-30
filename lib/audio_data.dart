@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:assets_audio_player/assets_audio_player.dart';
 import './models/category.dart';
 import './models/audio.dart';
 
@@ -7,6 +7,7 @@ import './models/audio.dart';
 // meditations themselves.
 
 // The audio is split up into categories by id, title, and color
+// Color affects the visual affects of the grids on the app
 // Color affects the visual affects of the grids on the app
 
 const AUDIO_CATEGORIES = const [
@@ -41,7 +42,7 @@ const AUDIO_CATEGORIES = const [
 //The steps are commented out throughout every file in this code in case we wanted to add a "Steps" section
 
 const AUDIO_DATA = const [
-  Audio(
+  Grouping(
     id: 'a1',
     categories: [
       'c1',
@@ -61,7 +62,7 @@ const AUDIO_DATA = const [
     isSleep: false,
     isWorkout: false,
   ),
-  Audio(
+  Grouping(
     id: 'a2',
     categories: [
       'c2',
@@ -81,7 +82,7 @@ const AUDIO_DATA = const [
     isSleep: false,
     isWorkout: false,
   ),
-  Audio(
+  Grouping(
     id: 'a3',
     categories: [
       'c3',
@@ -101,7 +102,7 @@ const AUDIO_DATA = const [
     isSleep: true,
     isWorkout: false,
   ),
-  Audio(
+  Grouping(
     id: 'a4',
     categories: [
       'c4',

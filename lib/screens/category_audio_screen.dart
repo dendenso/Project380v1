@@ -9,7 +9,7 @@ import '../models/audio.dart';
 class CategoryAudioScreen extends StatefulWidget {
   static const routeName = '/category-audio';
 
-  final List<Audio> availableAudio;
+  final List<Grouping> availableAudio;
 
   CategoryAudioScreen(this.availableAudio);
 
@@ -19,7 +19,7 @@ class CategoryAudioScreen extends StatefulWidget {
 
 class _CategoryAudioScreenState extends State<CategoryAudioScreen> {
   String categoryTitle;
-  List<Audio> displayedAudio;
+  List<Grouping> displayedAudio;
   var _loadedInitData = false;
 
   @override

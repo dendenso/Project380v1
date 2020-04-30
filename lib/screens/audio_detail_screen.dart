@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../audio_data.dart';
-import 'package:wellnessapplication/timer/countdown.dart';
+import 'package:wellnessapplication/countdown.dart';
 
 class AudioDetailScreen extends StatelessWidget {
   static const routeName = '/audio-detail';

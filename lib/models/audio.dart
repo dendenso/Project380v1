@@ -1,12 +1,12 @@
 import 'package:flutter/foundation.dart';
-
+import 'package:assets_audio_player/assets_audio_player.dart';
 enum Complexity {
   Short,
   Moderate,
   Long,
 }
 
-class Audio {
+class Grouping {
   final String id;
   final List<String> categories;
   final String title;
@@ -20,7 +20,7 @@ class Audio {
   final bool isSleep;
   final bool isWorkout;
 
-  const Audio({
+  const Grouping({
     @required this.id,
     @required this.categories,
     @required this.title,
@@ -33,5 +33,16 @@ class Audio {
     @required this.isStudy,
     @required this.isSleep,
     @required this.isWorkout,
+  });
+}
+class Sound {
+  final Audio audio;
+  final String name;
+  final String imageURL;
+
+  const Sound({
+    @required this.audio,
+    @required this.name,
+    @required this.imageURL,
   });
 }

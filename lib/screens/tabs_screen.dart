@@ -9,7 +9,7 @@ import '../models/audio.dart';
 // among some other color changes to the Navigation Bar and drawer
 
 class TabsScreen extends StatefulWidget {
-  final List<Audio> favoriteAudio;
+  final List<Grouping> favoriteAudio;
 
   TabsScreen(this.favoriteAudio);
 

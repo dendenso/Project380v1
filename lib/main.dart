@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import './audio_data.dart';
 import './screens/tabs_screen.dart';
 import './screens/audio_detail_screen.dart';
@@ -25,8 +24,8 @@ class _MyAppState extends State<MyApp> {
     'workout': false,
   };
 
-  List<Audio> _availableAudio = AUDIO_DATA;
-  List<Audio> _favoriteAudio = [];
+  List<Grouping> _availableAudio = AUDIO_DATA;
+  List<Grouping> _favoriteAudio = [];
 
   void _setFilters(Map<String, bool> filterData) {
     setState(() {
